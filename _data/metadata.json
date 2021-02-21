@@ -1,26 +1,27 @@
 {
-  "title": "Title of the website. Update me.",
-  "url": "https://update-me.com",
-  "domain": "update-me.com",
-  "description": "Description of the website. Update me.",
-  "genre": "Insert a schema.org genre",
-  "googleAnalyticsId": "GA ID. Update me",
+  "title": "Thoughts on Coding",
+  "url": "https://thoughts-on-coding.com",
+  "domain": "thoughts-on-coding.com",
+  "description": "My thoughts about software engineering and cumerical computation algorithm.",
+  "genre": "Blog",
+  "googleAnalyticsId": "UA-93471216-2",
   "sendWebVitals": false,
+  "disqusShortname": "thoughts-on-coding",
   "feed": {
-    "subtitle": "Subtitle. Update me.",
+    "subtitle": "My thoughts about software engineering and cumerical computation algorithm.",
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
-    "id": "https://update-me.com"
+    "id": "https://thoughts-on-coding.com"
   },
   "jsonfeed": {
     "path": "/feed/feed.json",
-    "url": "https://update-me.com/feed/feed.json"
+    "url": "https://thoughts-on-coding.com/feed/feed.json"
   },
   "author": {
-    "name": "Author Name. Update me.",
-    "twitterHandle": "update_me"
+    "name": "Benjamin Mahr",
+    "twitterHandle": "BenMahr"
   },
   "publisher": {
-    "name": "Publisher name. Update me."
+    "name": "Benjamin Mahr"
   }
 }

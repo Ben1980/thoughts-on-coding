@@ -32,16 +32,24 @@ const SELF = quote("self");
 const CSP = {
   regular: serialize([
     // By default only talk to same-origin
-    ["default-src", SELF],
+    //["default-src", SELF],
+    ["default-src", "*", quote("unsafe-eval"), quote("unsafe-inline")],
     // No plugins
     ["object-src", quote("none")],
     // Script from same-origin and inline-hashes.
-    ["script-src", SELF, /* Replaced by csp.js plugin */ "HASHES"],
+    //["script-src", SELF, quote("unsafe-eval"), quote("unsafe-inline"), 'https://cdn.jsdelivr.net', 's3.amazonaws.com', 'https://gmail.us20.list-manage.com', 'https://disqus.com', 'https://*.disqus.com', 'https://*.disquscdn.com'],
     // Inline CSS is allowed.
-    ["style-src", quote("unsafe-inline")],
+    //["style-src", SELF, quote("unsafe-inline"), quote("unsafe-eval"), 'https://cdn.jsdelivr.net', 'https://disqus.com', 'https://*.disqus.com', 'https://*.disquscdn.com'],
     // Images may also come from data-URIs.
-    ["img-src", SELF, "data:"],
+    //["img-src", SELF, "data:", quote("unsafe-inline"), quote("unsafe-eval"), 'https://disqus.com', 'https://*.disqus.com'],
+    //["font-src", SELF, quote("unsafe-inline"), 'https://cdn.jsdelivr.net'],
 
+    
+    //["object-src", "*", quote("unsafe-eval"), quote("unsafe-inline")],
+    ["script-src", "*", quote("unsafe-eval"), quote("unsafe-inline")],
+    ["style-src", "*", quote("unsafe-eval"), quote("unsafe-inline")],
+    ["img-src", "*", quote("unsafe-eval"), quote("unsafe-inline"), "data:"],
+    ["font-src", "*", quote("unsafe-eval"), quote("unsafe-inline")],
     // To add new rules, add new array literals here or extend those above with
     // additional allowed elements.
     // Example for allowing YouTube iframe embeds
