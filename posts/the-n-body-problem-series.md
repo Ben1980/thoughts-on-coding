@@ -11,7 +11,7 @@ image: /img/particleBackground.jpg
 
 I thought it would be a very nice idea to start my blog with a small project I wanted to do since a long time. A small tool/solver of the [n-body-problem][1]. It's not just only the interest of solving a challenging mathematical problem with modern C++. I also love clean, concise and readable code, which is also something I would like to train and share with this project. You can find the empty repository setup at [GitHub][2]. I will always try to tag the end state of the repository after each post of this blog series.
 
-![Hearo Image: Particles](/img/particleBackground.jpg)
+![Hero Image: Particles](/img/particleBackground.jpg)
 
 So lets start with the bare minimum of theory we need. We want to start with a simple example of two still standing masses (or stars if you like) which get attracted to each other. For the sake of simplicity we consider them as point masses which mean they are infinitesimal small, or in other words, they have no volume.
 
