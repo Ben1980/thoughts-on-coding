@@ -22,7 +22,7 @@ A more subtle, but in my opinion much more dangerous, problem occurs with transf
 
 But let's have a look at this little and simple code snippet:
 
-```c++
+```cpp
 class MyClass {
 public:
   int * getArray() const { 

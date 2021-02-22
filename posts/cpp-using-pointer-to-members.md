@@ -19,7 +19,7 @@ This topic might be a piece of cake for every experienced C++ veteran. But I rem
 
 So how might something like this look like? Let's say we have a vector of complex numbers which we want to sort by either the real or the imaginary number. This is our complex type:
 
-```c++
+```cpp
 struct Complex {
   double real;
   double imaginary;
@@ -28,14 +28,14 @@ struct Complex {
 
 For sorting vectors, we would use std::sort of course and for vectors of primitive types, it's rather simple to use. And indeed, it's easy to use with complex types as well. Because `std::sort` is offering an interface which is taking a compare function object that has to fulfill the requirements of [Compare][2]:
 
-```c++
+```cpp
 template<class RandomIt, class Compare>
 constexpr void sort(RandomIt first, RandomIt last, Compare comp); //constexpr since C++ 20
 ```
 
 Using std::sort for sorting according to real or imaginary numbers might then look like this:
 
-```c++
+```cpp
 std::vector<Complex> vec = { { 3, 1},
                              { 1, 9 },
                              { 8, 2 },
