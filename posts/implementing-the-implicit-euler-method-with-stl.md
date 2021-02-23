@@ -581,7 +581,7 @@ Benchmarking with 25.6K particles                   1  46714864800    46.7149 s
 All tests passed (25 assertions in 4 test cases)
 ```
 
-![Plot of the implicit euler method performance](/img/eulerplot-1.pmg)
+![Plot of the implicit euler method performance](/img/eulerplot-1.png)
 
 Till this point, we focused only on readability as much as possible, and I think we could even more. But I would like to focus on two certain issues on the next post, the efficiency of the algorithm and parallelization. If you would like to download the project at this state, feel free to get [v0.4.0][18].
 
