@@ -586,9 +586,9 @@ All tests passed (25 assertions in 4 test cases)
 Till this point, we focused only on readability as much as possible, and I think we could even more. But I would like to focus on two certain issues on the next post, the efficiency of the algorithm and parallelization. If you would like to download the project at this state, feel free to get [v0.4.0][18].
 
 [1]: https://obswww.unige.ch/lastro/conferences/sf2013/pdf/lecture1.pdf
-[2]: https://thoughts-on-coding.com/posts/the-n-body-problem-series/
-[3]: https://thoughts-on-coding.com/posts/and-then-there-was-cmake/
-[4]: https://thoughts-on-coding.com/posts/testing-point-mass-attraction-with-catch2/
+[2]: https://thoughts-on-coding.com/2019/02/08/the-n-body-problem-series/
+[3]: https://thoughts-on-coding.com/2019/02/14/and-then-there-was-cmake/
+[4]: https://thoughts-on-coding.com/2019/02/28/testing-point-mass-attraction-with-catch2/
 [5]: https://en.cppreference.com/w/cpp/types/numeric_limits/min
 [6]: https://randomascii.wordpress.com/2012/02/25/comparing-floating-point-numbers-2012-edition/
 [7]: http://www.tat.physik.uni-tuebingen.de/~schaefer/nbody.pdf

@@ -202,8 +202,8 @@ assertions: 2 | 2 failed
 Next time we will start to implement the rather simple Euler-Method and extend our tests with a couple of more interesting cases, such as singularity and performance tests. As usual, you can get the sources via GitHub [v0.3.0][11].
 
 [1]: https://www.reddit.com/r/cpp/comments/aqi7bk/and_then_there_was_cmake/
-[2]: https://thoughts-on-coding.com/posts/the-n-body-problem-series/
-[3]: https://thoughts-on-coding.com/posts/and-then-there-was-cmake/
+[2]: https://thoughts-on-coding.com/2019/02/08/the-n-body-problem-series/
+[3]: https://thoughts-on-coding.com/2019/02/14/and-then-there-was-cmake/
 [4]: https://en.wikipedia.org/wiki/Test-driven_development
 [5]: https://en.m.wikipedia.org/wiki/Stellar_collision
 [6]: https://en.m.wikipedia.org/wiki/Explicit_and_implicit_methods
