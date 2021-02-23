@@ -1,6 +1,6 @@
 ---
 title: Introduction into Logging with Loguru
-description: Bringing n-body solver onto a solid build system
+description: 
 date: 2019-03-12
 tags:
   - c++

@@ -1,6 +1,6 @@
 ---
 title: Why I think of myself as a programmer instead of a C++ programmer
-description: My thoughts about essential skills of a software engineer
+description: 
 date: 2019-02-10
 tags:
   - skills

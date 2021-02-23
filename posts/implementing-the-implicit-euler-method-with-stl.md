@@ -1,6 +1,6 @@
 ---
 title: "My God, It’s Full of Stars: Implementing the implicit Euler-Method with STL"
-description: Implementation of the implicit Euler-Method
+description: 
 date: 2019-03-07
 tags:
   - c++

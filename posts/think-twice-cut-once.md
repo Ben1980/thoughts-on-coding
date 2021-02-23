@@ -1,6 +1,6 @@
 ---
 title: Think twice, cut once
-description: About hidden pitfalls when following best practices blindly
+description: 
 date: 2019-02-15
 tags:
   - skills

@@ -1,6 +1,6 @@
 ---
 title: "My God, It’s Full Of Stars: Testing Point Mass Attraction with Catch2"
-description: Writing tests for the n-body solver
+description: 
 date: 2019-02-28
 tags:
   - c++

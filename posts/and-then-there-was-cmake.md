@@ -1,6 +1,6 @@
 ---
 title: "My God, It’s Full Of Stars: And then there was CMake"
-description: Bringing n-body solver onto a solid build system
+description: 
 date: 2019-02-14
 tags:
   - c++

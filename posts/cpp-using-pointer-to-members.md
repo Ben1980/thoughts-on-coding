@@ -1,6 +1,6 @@
 ---
 title: Using Pointer to Members on STL Algorithms
-description: Accessing members by a pointer to apply an algorithm to members of complex types
+description: 
 date: 2019-02-22
 tags:
   - c++
