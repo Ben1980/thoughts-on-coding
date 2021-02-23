@@ -8,12 +8,12 @@ tags:
   - logging
   - thread-safe
 layout: layouts/post.njk
-image: /img/log-2.jpg
+image: /img/log-2.png
 ---
 
 This time I would like to give a short introduction into a nice little library I just encountered. It's called [loguru][1] and it's a lightweight, Thread-Safe, logging library with an impressive good written [documentation][2] and human-readable output.
 
-![Hero Image: Logging excerpt](/img/log-2.jpg)
+![Hero Image: Logging excerpt](/img/log-2.png)
 
 To use it all you need to do is to add a single header and source file to compile with. Unfortunately, that's, in my opinion, also a drawback. Yes, it's easier to install and usable in training, but it can't be exchanged by whoever is operating the system after deployment. In such cases, where the operator wants to define how and what to use for logging, a generic logging interface (facade pattern), such as [slf4cxx][3] which is similar to its java pendant [slf4j][4], would be preferable.
 
