@@ -26,8 +26,6 @@ templateClass: tmpl-post
 <div id="disqus_thread"></div>
 <script>
   var disqus_config = function () {
-    console.log("{{metadata.url}}{{ page.url }}")
-    console.log("{{page.fileSlug}}")
     this.page.url = "{{metadata.url}}{{ page.url }}";  // Replace PAGE_URL with your page's canonical URL variable
     this.page.identifier = "{{ page.fileSlug }}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
   };
