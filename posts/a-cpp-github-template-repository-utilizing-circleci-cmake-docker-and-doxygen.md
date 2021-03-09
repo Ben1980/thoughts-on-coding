@@ -162,7 +162,11 @@ RUN git clone https://github.com/microsoft/vcpkg.git && \ #(3)
 
 The image can then be build (make sure you're at the same directory as the Dockerfile is) by `sudo docker build -t IMAGENAME .`, afterward the resulting image needs to be tagged by `sudo docker tag IMAGENAME:TAG DOCKERHUBUSERNAME/IMAGENAME:TAG` and then can be pushed to dockerhub by `sudo docker push DOCKERHUBUSERNAME/IMAGENAME:TAG`.
 
-![Example of a docker image generation for the cpptemplate](/img/cpptemplateimage.mp4)
+<video src="/img/cpptemplateimage.mp4" controls autobuffer >
+  Sorry, your browser doesn't support embedded videos,
+  but don't worry, you can <a href="/img/cpptemplateimage.mp4">download it</a>
+  and watch it with your favorite video player!
+</video>
 *Example of a docker image generation for the cpptemplate*
 
 ## Converting Test Results
