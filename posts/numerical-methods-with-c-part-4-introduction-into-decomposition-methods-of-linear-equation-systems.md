@@ -21,7 +21,7 @@ Welcome back to a new post on thoughts-on-coding.com. This time we will have a c
 
 So let's start by defining what we mean when we talk about matrices. Matrices are rectangular representations of the coefficients of linear equation systems of $N$ linear equations with $M$ unknowns such as
 
-$$\begin{matrix}2x+1.5y-3z = 2 \\1.2x-0.25y-1z = 3 \\0.5y+1.5z = 1\end{matrix}\rightarrow\begin{pmatrix}2 & 1.5 & -3 \\1.2 & -0.25 & -1 \\0 & 0.5 & 1.5\end{pmatrix}\begin{pmatrix}x \\y \\z\end{pmatrix}=\begin{pmatrix}2 \\3 \\1\end{pmatrix}$$ 
+$$\begin{matrix} 2x+1.5y-3z& = 2 \\\\ 1.2x-0.25y-1z& = 3 \\\\ 0.5y+1.5z& = 1 \end{matrix} \rightarrow \begin{pmatrix} 2 & 1.5 & -3 \\\\ 1.2 & -0.25 & -1 \\\\ 0 & 0.5 & 1.5 \end{pmatrix} \begin{pmatrix} x \\\\ y \\\\ z \end{pmatrix} = \begin{pmatrix} 2 \\\\ 3 \\\\ 1 \end{pmatrix}$$
 
 A special subset of matrices are [invertible matrices][3] with $N$ linear equations and $N$ unknowns which we will discuss in this post. They are a key concept in linear algebra and used at almost every area in mathematics to represent linear transformations such as rotation of vectors in three-dimensional space. Knowing this a representation of the data as a two-dimensional vector would somehow feel natural not only because of the structure of the data but also how to access the data. As a result, the first rough implementation of a matrix could look like this
 
@@ -653,11 +653,11 @@ Decomposition<T> Decompose(const Matrix<T> &matrix) {
 
 An example of a matrix $A$ and its decomposition matrices $L$ and $U$ would look like the following.
 
-$$A=\begin{pmatrix}1 & 2 & 3 \\1 & 1 & 1 \\3 & 3 & 1\end{pmatrix}L=\begin{pmatrix}1 & 0 & 0 \\1 & 1 & 0 \\3 & 3 & 1\end{pmatrix}U=\begin{pmatrix}1 & 2 & 3 \\0 & -1 & -2 \\0 & 0 & -2\end{pmatrix}$$
+$$A=\begin{pmatrix}1 & 2 & 3 \\\\ 1 & 1 & 1 \\\\ 3 & 3 & 1 \end{pmatrix}L=\begin{pmatrix}1 & 0 & 0 \\\\ 1 & 1 & 0 \\\\ 3 & 3 & 1 \end{pmatrix}U=\begin{pmatrix}1 & 2 & 3 \\\\ 0 & -1 & -2 \\\\ 0 & 0 & -2\end{pmatrix}$$
 
 We have now a reliable algorithm to decompose an invertible matrix and solve the linear equation system. So let's say we have one of these invertible matrices which have non zero main diagonal pivot elements. It should be no problem to solve the linear equation system with the algorithm described above, now. Let's find out and say we have to solve the following linear equation system, with an accuracy of 5 digits, which should lead to the results $x_1=2.5354$ and $x_2=2.7863$:
 
-$$\begin{pmatrix} 0.00035 & 1.2654 \\ 1.2547 & 1.3182 \end{pmatrix} \begin{pmatrix} x_1 \\ x_2 \end{pmatrix}=\begin{pmatrix} 3.5267 \\ 6.8541 \end{pmatrix}$$
+$$\begin{pmatrix} 0.00035 & 1.2654 \\\\ 1.2547 & 1.3182 \end{pmatrix} \begin{pmatrix} x_1 \\\\ x_2 \end{pmatrix}=\begin{pmatrix} 3.5267 \\\\ 6.8541 \end{pmatrix}$$
 
 After solving the linear equation system we can get the results of $x_1$ and $x_2$ by back substitution
 
@@ -667,7 +667,7 @@ $$x_1=\frac{35267-1.2654 \cdot x_2}{0.00035}=\frac{3.5267-3.5258}{0.00035}=\frac
 
 Unfortunately, the result of $x_1$ is quite off-target. The problem is the loss of significance due to the difference between the two values of the almost same size. To solve this problem we need the partial pivoting strategy which is exchanging the actual pivot element with the value of the largest element of the column. Ok let's try again with the example above, but this time we have exchanged both rows to have the maximum values at the main diagonal pivots:
 
-$$\begin{pmatrix}  1.2547 & 1.3182  \\ 0.00035 & 1.2654 \end{pmatrix} \begin{pmatrix} x_1 \\ x_2 \end{pmatrix}=\begin{pmatrix}  6.8541 \\ 3.5267 \end{pmatrix}$$ 
+$$\begin{pmatrix}  1.2547 & 1.3182  \\\\ 0.00035 & 1.2654 \end{pmatrix} \begin{pmatrix} x_1 \\\\ x_2 \end{pmatrix}=\begin{pmatrix}  6.8541 \\\\ 3.5267 \end{pmatrix}$$ 
 
 Again after solving the linear equation system we can get the results of $x_1$ and $x_2$ by back substitution
 
@@ -677,21 +677,21 @@ $$x_1=\frac{6.8541-1.3182\cdot x_2}{1.2547}=\frac{6.8541-3.6730}{1.2547}=\frac{3
 
 Now the results are much better. But unfortunately, we can prove that also performing a partial pivoting, according to the largest element in the column, is not always sufficient. Let's say we have the following linear equation system
 
-$$\begin{pmatrix} 2.1 & 2512 & -2516 \\ -1.3 & 8.8 & -7.6 \\ 0.9 & -6.2 & 4.6 \end{pmatrix} \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix}=\begin{pmatrix} 6.5 \\ -5.3 \\ 2.9 \end{pmatrix}$$
+$$\begin{pmatrix} 2.1 & 2512 & -2516 \\\\ -1.3 & 8.8 & -7.6 \\\\ 0.9 & -6.2 & 4.6 \end{pmatrix} \begin{pmatrix} x_1 \\\\ x_2 \\\\ x_3 \end{pmatrix}=\begin{pmatrix} 6.5 \\\\ -5.3 \\\\ 2.9 \end{pmatrix}$$
 
 And after solving the linear equation system and applying partial pivoting before each iteration, the solution looks like
 
-$$\begin{pmatrix} 2.1 & 2512 & -2516 \\ 0 & 1563.9 & -1565.1\\ 0 & -1082.8 & 1082.9 \end{pmatrix} \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix}=\begin{pmatrix} 6.5 \\ -1.2762 \\ 0.1143 \end{pmatrix}$$
+$$\begin{pmatrix} 2.1 & 2512 & -2516 \\\\ 0 & 1563.9 & -1565.1 \\\\ 0 & -1082.8 & 1082.9 \end{pmatrix} \begin{pmatrix} x_1 \\\\ x_2 \\\\ x_3 \end{pmatrix}=\begin{pmatrix} 6.5 \\\\ -1.2762 \\\\ 0.1143 \end{pmatrix}$$
 
-$$\begin{pmatrix} 2.1 & 2512 & -2516 \\ 0 & 1563.9 & -1565.1\\ 0 & 0 & -0.7 \end{pmatrix} \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix}=\begin{pmatrix} 6.5 \\ -1.2762 \\ -0.76930 \end{pmatrix}$$
+$$\begin{pmatrix} 2.1 & 2512 & -2516 \\\\ 0 & 1563.9 & -1565.1 \\\\ 0 & 0 & -0.7 \end{pmatrix} \begin{pmatrix} x_1 \\\\ x_2 \\\\ x_3 \end{pmatrix}=\begin{pmatrix} 6.5 \\\\ -1.2762 \\\\ -0.76930 \end{pmatrix}$$
 
 As a result, after the back substitution, we get $x_1=5.1905$ and  $x_2=x_3=1.0990$, but the exact results are $x_1=5$ and $x_2=x_3=1$. Again the solution is off-target. The difference of the exact and numerical calculated solution can be explained by the big coefficients $a_{ik}^{(1)}$ after the first iteration which already leads to a loss of information due to value rounding. Additional the values of $a_{32}^{(1)}$ and $a_{33}^{(1)}$ lead again to a loss of significance at $a_{33}^{(2)}$. The reason behind this behavior is the small value of the first pivot element at the first iteration step compared to the other values of the first row. The matrix was neither [strict diagonal dominant nor weak diagonal dominant][25].
 
-$$\begin{matrix} \left| a_{ii} \right| > \sum_{k=1, k\neq i}^{n}\left| a_{ik} \right|, \quad \text{strict diagonal dominant} \\ \left| a_{ii} \right| \geq \sum_{k=1, k\neq i}^{n}\left| a_{ik} \right|, \quad \text{weak diagonal dominant} \end{matrix}$$
+$$\begin{matrix} \left| a_{ii} \right| > \sum_{k=1, k\neq i}^{n}\left| a_{ik} \right|, \quad \text{strict diagonal dominant} \\\\ \left| a_{ii} \right| \geq \sum_{k=1, k\neq i}^{n}\left| a_{ik} \right|, \quad \text{weak diagonal dominant} \end{matrix}$$
 
 A solution to this problem is the relative [scaled pivoting strategy][26]. This pivoting strategy is scaling indirectly by choosing the pivot element whose value is, relative to the sum of the values of the other elements of the row, maximum before each iteration.
 
-$$\max_{k \leq i \leq n}\left\{ \frac{\left| a_{ik}^{(k-1)} \right|}{\sum_{j=k}^{n}\left| a_{ij}^{(k-1)} \right|} \right\}=\frac{\left| a_{pk}^{(k-1)} \right|}{\sum_{j=k}^{n}\left| a_{pj}^{(k-1)} \right|}$$
+$$\max_{k \leq i \leq n} \left\{ \frac{\left| a_{ik}^{(k-1)} \right|}{\sum_{j=k}^{n}\left| a_{ij}^{(k-1)} \right|} \right\}=\frac{\left| a_{pk}^{(k-1)} \right|}{\sum_{j=k}^{n}\left| a_{pj}^{(k-1)} \right|}$$
 
 As long as $p \neq k$ the p-row gets exchanged by the k-row. The exchange of rows can be represented by a permutation matrix and therefore
 
@@ -768,11 +768,11 @@ namespace PivotLUDecomposition {
 
 After initializing the $U$ matrix with the $A$ matrix and the permutation matrix $P$ with an [identity matrix][27], the algorithm is calculating (1) the sum of all elements of row $i$ where column $j > i$ and afterward (2) the quotient $q$. As long as the maximum is not zero and $pk \neq k$ the $pk$ and $p$ row of $L$, $U$ and $P$ matrix will be swapped.
 
-$$\begin{pmatrix} 2.1 & 2512 & -2516 \\ -1.3 & 8.8 & -7.6 \\ 0.9 & -6.2 & 4.6 \end{pmatrix} \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix}=\begin{pmatrix} 6.5 \\ -5.3 \\ 2.9 \end{pmatrix}$$
+$$\begin{pmatrix} 2.1 & 2512 & -2516 \\\\ -1.3 & 8.8 & -7.6 \\\\ 0.9 & -6.2 & 4.6 \end{pmatrix} \begin{pmatrix} x_1 \\\\ x_2 \\\\ x_3 \end{pmatrix}=\begin{pmatrix} 6.5 \\\\ -5.3 \\\\ 2.9 \end{pmatrix}$$
 
-$$\begin{pmatrix} 0.9 & -6.2 & 4.6\\ -1.4444 & -0.15530 & -0.95580 \\ 2.3333 & 2526.5 & -2526.7 \end{pmatrix} \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix}=\begin{pmatrix} 2.9 \\ -1.1112 \\ -0.2666 \end{pmatrix}$$
+$$\begin{pmatrix} 0.9 & -6.2 & 4.6 \\\\ -1.4444 & -0.15530 & -0.95580 \\\\ 2.3333 & 2526.5 & -2526.7 \end{pmatrix} \begin{pmatrix} x_1 \\\\ x_2 \\\\ x_3 \end{pmatrix}=\begin{pmatrix} 2.9 \\\\ -1.1112 \\\\ -0.2666 \end{pmatrix}$$
 
-$$\begin{pmatrix} 0.9 & -6.2 & 4.6\\ 2.3333 & 2526.5 & -2526.7\\ -1.4444 & -0.000061468 & -1.1111\end{pmatrix} \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix}=\begin{pmatrix} 2.9 \\ -0.2666\\ -1.1112 \end{pmatrix}$$
+$$\begin{pmatrix} 0.9 & -6.2 & 4.6 \\\\ 2.3333 & 2526.5 & -2526.7 \\\\ -1.4444 & -0.000061468 & -1.1111 \end{pmatrix} \begin{pmatrix} x_1 \\\\ x_2 \\\\ x_3 \end{pmatrix}=\begin{pmatrix} 2.9 \\\\ -0.2666 \\\\ -1.1112 \end{pmatrix}$$
 
 The results after back substitution are $x_1=5.0001$ and $x_2=x_3=1.0001$ illustrate the supremacy of an LU-Decomposition algorithm with a relative scaled pivot strategy compared to an LU-Decomposition with a plain diagonal pivoting strategy. Because of the rounding errors of the LU-Decomposition, with and without relative scaled pivoting, an [iterative refinement][28] is necessary, which is not part of this post.
 
@@ -780,7 +780,7 @@ The results after back substitution are $x_1=5.0001$ and $x_2=x_3=1.0001$ illust
 
 Many problems solved with matrices, such as the [Finite Element Method][29], are depending on the [law of conservation of energy][30]. Important properties of these matrices are their [symmetry][31] and that these matrices are [positive definite][32]. A matrix is positive definite if its corresponding quadratic form is positive.
 
-$$Q(x)=x^{T}Ax=\sum_{i=1}^{n}\sum_{k=1}^{n}a_{ik}x_{i}x_{k}= \left\{ \begin{array}{cc} \geq 0 & \quad \text{for all}\quad x\epsilon \mathbb{R}^n \\ = 0 & \quad \text{only for}\quad x=0 \end{array} \right.$$
+$$Q(x)=x^{T}Ax=\sum_{i=1}^{n}\sum_{k=1}^{n}a_{ik}x_{i}x_{k}= \left\{ \begin{array}{cc} \geq 0 & \quad \text{for all}\quad x\epsilon \mathbb{R}^n \\\\ = 0 & \quad \text{only for}\quad x=0 \end{array} \right.$$
 
 That means that the elements of a symmetric positive definite matrix are necessarily fulfilling the criteria
 
