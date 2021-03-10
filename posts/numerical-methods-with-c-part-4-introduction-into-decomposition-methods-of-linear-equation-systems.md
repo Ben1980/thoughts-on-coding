@@ -691,7 +691,7 @@ $$\begin{matrix} \left| a_{ii} \right| > \sum_{k=1, k\neq i}^{n}\left| a_{ik} \r
 
 A solution to this problem is the relative [scaled pivoting strategy][26]. This pivoting strategy is scaling indirectly by choosing the pivot element whose value is, relative to the sum of the values of the other elements of the row, maximum before each iteration.
 
-$$\max_{k \leq i \leq n} \left\{ \frac{\left| a_{ik}^{(k-1)} \right|}{\sum_{j=k}^{n}\left| a_{ij}^{(k-1)} \right|} \right\}=\frac{\left| a_{pk}^{(k-1)} \right|}{\sum_{j=k}^{n}\left| a_{pj}^{(k-1)} \right|}$$
+$$\max_{ k \leq i \leq n } \Biggl\lbrace \frac{\left| a_{ik}^{(k-1)} \right| }{ \sum_{j=k}^{n}\left| a_{ij}^{(k-1)} \right| } \Biggr\rbrace = \frac{ \left| a_{pk}^{(k-1)} \right| }{ \sum_{j=k}^{n}\left| a_{pj}^{(k-1)} \right| }$$
 
 As long as $p \neq k$ the p-row gets exchanged by the k-row. The exchange of rows can be represented by a permutation matrix and therefore
 
