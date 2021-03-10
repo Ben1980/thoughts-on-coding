@@ -1,6 +1,6 @@
 ---
 title: "Numerical Methods with C++ Part 3: Root Approximation Algorithms"
-description: 
+description: Post about root approximation algorithm bisection, newton, dekker, and brent.
 date: 2019-06-06
 tags:
   - c++

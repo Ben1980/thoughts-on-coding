@@ -1,6 +1,6 @@
 ---
 title: "Numerical Methods with C++ Part 4: Introduction Into Decomposition Methods of Linear Equation Systems"
-description: 
+description: Post about decomposing linear equation systems.
 date: 2019-06-12
 tags:
   - c++

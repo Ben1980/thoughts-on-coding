@@ -1,6 +1,6 @@
 ---
 title: Introduction into C++ Builds with Gradle
-description: 
+description: Post about building C++ applications with gradle.
 date: 2019-04-10
 tags:
   - c++

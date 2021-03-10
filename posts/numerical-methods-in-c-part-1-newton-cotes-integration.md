@@ -1,6 +1,6 @@
 ---
 title: "Numerical Methods with C++ Part 1: Newton-Cotes Integration"
-description: 
+description: Post about three Newton-Cotes integration algorithm.
 date: 2019-04-17
 tags:
   - c++

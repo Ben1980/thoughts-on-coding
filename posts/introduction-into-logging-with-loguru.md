@@ -1,6 +1,6 @@
 ---
 title: Introduction into Logging with Loguru
-description: 
+description: Post about thread save logging with C++ and loguru.
 date: 2019-03-12
 tags:
   - c++

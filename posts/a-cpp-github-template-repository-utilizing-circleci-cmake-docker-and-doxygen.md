@@ -1,6 +1,6 @@
 ---
 title: A C++ GitHub Template Repository utilizing CircleCI, CMAKE, Docker and Doxygen
-description: 
+description: Post about a C++ GitHub template utilizing different technologies including CI/CD and automatic generation and deployment of the documentation.
 date: 2020-04-20
 tags:
   - build-automation

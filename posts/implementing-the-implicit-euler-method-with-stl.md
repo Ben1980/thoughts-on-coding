@@ -1,6 +1,6 @@
 ---
 title: "My God, It’s Full of Stars: Implementing the implicit Euler-Method with STL"
-description: 
+description: Post about solving the n-body problem wiht the implicit Euler-Method.
 date: 2019-03-07
 tags:
   - c++

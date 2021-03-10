@@ -1,6 +1,6 @@
 ---
 title: "My God, It’s Full Of Stars: The N-Body-Problem Series"
-description: 
+description: Short introduction into the n-body problem.
 date: 2019-02-08
 tags:
   - c++

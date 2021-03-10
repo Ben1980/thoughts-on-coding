@@ -1,6 +1,6 @@
 ---
 title: Weekly Knowledge Candy
-description: 
+description: Post about our knowledge transfer process.
 date: 2019-03-21
 tags:
   - eductation

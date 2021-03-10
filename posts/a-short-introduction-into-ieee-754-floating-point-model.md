@@ -1,6 +1,6 @@
 ---
 title: A short Introduction into IEEE 754 Floating-Point Model
-description: 
+description: Post about the IEEE754 floating-point model.
 date: 2019-04-03
 tags:
   - c++

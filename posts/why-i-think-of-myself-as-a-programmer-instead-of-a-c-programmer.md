@@ -1,6 +1,6 @@
 ---
 title: Why I think of myself as a programmer instead of a C++ programmer
-description: 
+description: Post about why it is better to focus on concepts and fundamentals instead of short-living technologies in education.
 date: 2019-02-10
 tags:
   - skills

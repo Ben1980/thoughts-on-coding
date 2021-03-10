@@ -1,6 +1,6 @@
 ---
 title: "My God, It’s Full Of Stars: And then there was CMake"
-description: 
+description: Post about build system of n-body library with cmake.
 date: 2019-02-14
 tags:
   - c++

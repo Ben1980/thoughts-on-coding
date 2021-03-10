@@ -1,6 +1,6 @@
 ---
 title: Introduction into an Automated C++ Build Setup with Jenkins and CMake
-description: 
+description: Post about a jenkins example project setup for C++ with cmake, vcpkg, and other technologies.
 date: 2019-03-27
 tags:
   - c++

@@ -1,6 +1,6 @@
 ---
 title: Structure Padding in C++
-description: 
+description: Post about structur padding and space consuption of structures in C++.
 date: 2020-09-14
 tags:
   - c++

@@ -1,6 +1,6 @@
 ---
 title: New Name ... New URL ... New Opportunities
-description: 
+description: Everything is new.
 date: 2020-01-19
 tags:
   - announcement

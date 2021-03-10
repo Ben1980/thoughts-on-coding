@@ -1,6 +1,6 @@
 ---
 title: "Numerical Methods with C++ Part 2: Gauss-Legendre Integration"
-description: 
+description: Post about the Gauss-Legendre integration.
 date: 2019-04-25
 tags:
   - c++

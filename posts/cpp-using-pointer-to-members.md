@@ -1,6 +1,6 @@
 ---
 title: Using Pointer to Members on STL Algorithms
-description: 
+description: Post about Pointer to Members concept in C++.
 date: 2019-02-22
 tags:
   - c++

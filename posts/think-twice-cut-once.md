@@ -1,6 +1,6 @@
 ---
 title: Think twice, cut once
-description: 
+description: Post about importance of writting quality code.
 date: 2019-02-15
 tags:
   - skills
