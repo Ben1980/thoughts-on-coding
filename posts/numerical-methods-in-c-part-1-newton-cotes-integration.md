@@ -147,7 +147,12 @@ std::vector<std::vector<double>> rombergIntegral(double a, double b, size_t n, c
 }
 ```
 
-![Screen capture of program execution](/img/newtoncotes-1.gif)
+<video src="/img/newtoncotes.mp4" controls autobuffer >
+  Sorry, your browser doesn't support embedded videos,
+  but don't worry, you can <a href="/img/newtoncotes.mp4">download it</a>
+  and watch it with your favorite video player!
+</video>
+*Screen capture of program execution*
 
 The repository [numericalIntegration][6] can be found at GitHub. It will also contain the other numerical integration methods, as the name suggests, later on.
 

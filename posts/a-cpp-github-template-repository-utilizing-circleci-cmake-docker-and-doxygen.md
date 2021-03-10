@@ -109,7 +109,11 @@ workflows:
 
 With the [CircleCI CLI][24] there is also a nice tool to test our CircleCI configuration by `sudo circleci local execute` or `sudo circleci local execute JOBNAME` for a specific job to run. The only drawback is that it's not supporting workflows right now, but still, it's enough to test the configuration without nee to commit, maybe broken, code to our repositories.
 
-![Example job invocation of the CircleCI CLI](/img/circlecicli.gif)
+<video src="/img/circlecicli.mp4" controls autobuffer >
+  Sorry, your browser doesn't support embedded videos,
+  but don't worry, you can <a href="/img/circlecicli.mp4">download it</a>
+  and watch it with your favorite video player!
+</video>
 *Example job invocation of the CircleCI CLI*
 
 ## Custom Docker Image

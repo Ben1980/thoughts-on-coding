@@ -207,7 +207,12 @@ BUILD SUCCESSFUL in 0s
 1 actionable task: 1 executed
 ```
 
-![Build executed in shell](/img/gradlebuild.gif)
+<video src="/img/gradlebuild.mp4" controls autobuffer >
+  Sorry, your browser doesn't support embedded videos,
+  but don't worry, you can <a href="/img/gradlebuild.mp4">download it</a>
+  and watch it with your favorite video player!
+</video>
+*Build executed in shell*
 
 UPDATE: Thanks to [D. Lacasse][13], I updated the source set configuration section to customize the folder structure of a project.
 
