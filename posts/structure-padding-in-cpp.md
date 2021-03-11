@@ -6,12 +6,12 @@ tags:
   - c++
   - memory
 layout: layouts/post.njk
-image: /img/pexels-pexels-pixabay-159298.jpg
+image: /img/pexels-pixabay-159298.jpg
 ---
 
 Lately, I was discussing with other developers at my company about the memory alignment of structure members and I thought why not make a short post about it. To be honest I think it’s an underrated topic nowadays with machines with basically infinite memory and billions of cycles per second. Regardless, even if it’s not important for many developers, it’s still good to know and important if you develop on devices with limited resources.
 
-![Hero Image: Gearbox, Foto von Pixabay von Pexels](/img/pexels-pexels-pixabay-159298.jpg)
+![Hero Image: Gearbox, Foto von Pixabay von Pexels](/img/pexels-pixabay-159298.jpg)
 
 ## Data Models and Resulting Sizes of Fundamental Types
 
