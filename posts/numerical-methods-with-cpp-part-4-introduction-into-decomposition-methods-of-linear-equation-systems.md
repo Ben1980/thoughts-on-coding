@@ -780,7 +780,7 @@ The results after back substitution are $x_1=5.0001$ and $x_2=x_3=1.0001$ illust
 
 Many problems solved with matrices, such as the [Finite Element Method][29], are depending on the [law of conservation of energy][30]. Important properties of these matrices are their [symmetry][31] and that these matrices are [positive definite][32]. A matrix is positive definite if its corresponding quadratic form is positive.
 
-$$Q(x)=x^{T}Ax=\sum_{i=1}^{n}\sum_{k=1}^{n}a_{ik}x_{i}x_{k}= \left\{ \begin{array}{cc} \geq 0 & \quad \text{for all}\quad x\epsilon \mathbb{R}^n \\\\ = 0 & \quad \text{only for}\quad x=0 \end{array} \right.$$
+$$Q(x)=x^{T}Ax=\sum_{i=1}^{n}\sum_{k=1}^{n}a_{ik}x_{i}x_{k}= \biggl\lbrace \begin{array}{cc} \geq 0 & \quad \text{for all}\quad x\epsilon \mathbb{R}^n \\\\ = 0 & \quad \text{only for}\quad x=0 \end{array} $$
 
 That means that the elements of a symmetric positive definite matrix are necessarily fulfilling the criteria
 

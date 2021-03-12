@@ -155,5 +155,5 @@ is very accurate. We end up with an error of only $-3.8151e^{-6}$. Gauss-Legendr
 *Screen capture of program execution*
 
 [1]: https://en.wikipedia.org/wiki/Gaussian_quadrature#Gauss%E2%80%93Legendre_quadrature
-[2]: https://thoughts-on-coding.com/2019/04/17/numerical-methods-in-c-part-1-newton-cotes-integration/
+[2]: https://thoughts-on-coding.com/2019/04/17/numerical-methods-in-cpp-part-1-newton-cotes-integration/
 [3]: https://en.m.wikipedia.org/wiki/Legendre_polynomials
