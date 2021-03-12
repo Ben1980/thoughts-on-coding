@@ -5,7 +5,7 @@
   "description": "My thoughts about software engineering and cumerical computation algorithm.",
   "genre": "Blog",
   "googleAnalyticsId": "UA-93471216-2",
-  "sendWebVitals": false,
+  "sendWebVitals": true,
   "disqusShortname": "thoughts-on-coding",
   "feed": {
     "subtitle": "My thoughts about software engineering and cumerical computation algorithm.",
