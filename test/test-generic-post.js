@@ -65,7 +65,7 @@ describe("check build output for a generic post", () => {
       const scripts = doc.querySelectorAll("script[src]");
       console.log(scripts);
       let has_ga_id = GA_ID ? 1 : 0;
-      expect(scripts).to.have.length(has_ga_id + 4); // NOTE: update this when adding more <script>
+      expect(scripts).to.have.length(has_ga_id + 1); // NOTE: update this when adding more <script>
       expect(scripts[0].getAttribute("src")).to.match(
         /^\/js\/min\.js\?hash=\w+/
       );
