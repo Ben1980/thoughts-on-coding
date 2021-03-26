@@ -109,7 +109,7 @@ workflows:
 
 With the [CircleCI CLI][24] there is also a nice tool to test our CircleCI configuration by `sudo circleci local execute` or `sudo circleci local execute JOBNAME` for a specific job to run. The only drawback is that it's not supporting workflows right now, but still, it's enough to test the configuration without nee to commit, maybe broken, code to our repositories.
 
-<video src="/img/circlecicli.mp4" controls autobuffer >
+<video src="/img/circlecicli.mp4" autoplay muted loop >
   Sorry, your browser doesn't support embedded videos,
   but don't worry, you can <a href="/img/circlecicli.mp4">download it</a>
   and watch it with your favorite video player!
@@ -166,7 +166,7 @@ RUN git clone https://github.com/microsoft/vcpkg.git && \ #(3)
 
 The image can then be build (make sure you're at the same directory as the Dockerfile is) by `sudo docker build -t IMAGENAME .`, afterward the resulting image needs to be tagged by `sudo docker tag IMAGENAME:TAG DOCKERHUBUSERNAME/IMAGENAME:TAG` and then can be pushed to dockerhub by `sudo docker push DOCKERHUBUSERNAME/IMAGENAME:TAG`.
 
-<video src="/img/cpptemplateimage.mp4" controls autobuffer >
+<video src="/img/cpptemplateimage.mp4" autoplay muted loop >
   Sorry, your browser doesn't support embedded videos,
   but don't worry, you can <a href="/img/cpptemplateimage.mp4">download it</a>
   and watch it with your favorite video player!

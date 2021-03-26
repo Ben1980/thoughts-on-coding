@@ -32,7 +32,7 @@ Let's start with a method which is mostly used to search for values in arrays of
 3. If new m-a or $|f(m)|$ is fulfilling the convergence criteria we have the solution $m$
 4. Comparing sign of $f(m)$ and replace either $f(a)$ or $f(b)$ so that the resulting interval is including the sought root
 
-<video src="/img/bisection.mp4" controls autobuffer >
+<video src="/img/bisection.mp4" autoplay muted loop >
   Sorry, your browser doesn't support embedded videos,
   but don't worry, you can <a href="/img/bisection.mp4">download it</a>
   and watch it with your favorite video player!
@@ -100,7 +100,7 @@ As long as we have also the derivative of the function and the function is smoot
 
 $$x_{n+1}=x_n-\frac{f(x_n)}{f'(x_n)}$$
 
-<video src="/img/newton-2.mp4" controls autobuffer >
+<video src="/img/newton-2.mp4" autoplay muted loop >
   Sorry, your browser doesn't support embedded videos,
   but don't worry, you can <a href="/img/newton-2.mp4">download it</a>
   and watch it with your favorite video player!
@@ -170,7 +170,7 @@ In many cases, we don't have, or it might be to complex, a derivative of a funct
 
 $$x_{n+1}=x_n-f(x_n)\frac{x_n-x_{n-1}}{f(x_n)-f(x_{n-1})}$$
 
-<video src="/img/secant.mp4" controls autobuffer >
+<video src="/img/secant.mp4" autoplay muted loop >
   Sorry, your browser doesn't support embedded videos,
   but don't worry, you can <a href="/img/secant.mp4">download it</a>
   and watch it with your favorite video player!

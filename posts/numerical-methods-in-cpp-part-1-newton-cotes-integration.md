@@ -147,7 +147,7 @@ std::vector<std::vector<double>> rombergIntegral(double a, double b, size_t n, c
 }
 ```
 
-<video src="/img/newtoncotes-1.mp4" controls autobuffer >
+<video src="/img/newtoncotes-1.mp4" autoplay muted loop >
   Sorry, your browser doesn't support embedded videos,
   but don't worry, you can <a href="/img/newtoncotes-1.mp4">download it</a>
   and watch it with your favorite video player!

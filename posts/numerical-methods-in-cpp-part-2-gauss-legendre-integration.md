@@ -147,7 +147,7 @@ $$I=\int_0^{\pi/2} \frac{5}{e^\pi-2}\exp(2x)\cos(x)dx=1.0$$
 
 is very accurate. We end up with an error of only $-3.8151e^{-6}$. Gauss-Legendre integration works very good for integrating smooth functions and result in higher accuracy with the same number of nodes compared to Newton-Cotes Integration. A drawback of Gauss-Legendre integration might be the performance in case of dynamic integration where the number of nodes are changing.
 
-<video src="/img/numericalintegration.mp4" controls autobuffer >
+<video src="/img/numericalintegration.mp4" autoplay muted loop >
   Sorry, your browser doesn't support embedded videos,
   but don't worry, you can <a href="/img/numericalintegration.mp4">download it</a>
   and watch it with your favorite video player!

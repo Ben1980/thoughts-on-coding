@@ -207,7 +207,7 @@ BUILD SUCCESSFUL in 0s
 1 actionable task: 1 executed
 ```
 
-<video src="/img/gradlebuild.mp4" controls autobuffer >
+<video src="/img/gradlebuild.mp4" autoplay muted loop >
   Sorry, your browser doesn't support embedded videos,
   but don't worry, you can <a href="/img/gradlebuild.mp4">download it</a>
   and watch it with your favorite video player!
