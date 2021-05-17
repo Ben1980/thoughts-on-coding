@@ -34,13 +34,13 @@ To be able to store also negative exponents e with a positive number we need to 
 
 Let's try an example now. How would be the representation of $\pi=3.14$ look like?
 
-$$\\ 3 / 2 = 1 -> 1 \\ 1 / 2 = 0 -> 1 \\$$
+$$\\\\ 3 / 2 = 1 \rightarrow 1 \\\\ 1 / 2 = 0 \rightarrow 1 \\\\$$
 
-$$\\ 0.14 \cdot 2 = 0.28 \rightarrow -0 \\ 0.28 \cdot 2 = 0.56 \rightarrow -0 \\ 0.56 \cdot 2 = 1.12 \rightarrow -1 \\ \cdot \\ \cdot \\ = 0.001000111101011100001 \\$$
+$$\\\\ 0.14 \cdot 2 = 0.28 \rightarrow -0 \\\\ 0.28 \cdot 2 = 0.56 \rightarrow -0 \\\\ 0.56 \cdot 2 = 1.12 \rightarrow -1 \\\\ \cdot \\\\ \cdot \\\\ = 0.001000111101011100001 \\\\$$
 
 As a result $\pi$'s binary representation is 11,00100011110101110001 and after normalization with $r-1$ and $r=8$ bit
 
-$$\\ 11,001000111101011100001 \cdot 2^{01111111-01111111} \\ 1,1001000111101011100001 \cdot 2^{10000000-01111111} \\$$
+$$\\\\ 11,001000111101011100001 \cdot 2^{01111111-01111111} \\\\ 1,1001000111101011100001 \cdot 2^{10000000-01111111} \\\\$$
 
 we get the mantissa $m=1,100100011110101110001$ and an exponent with bias of $e=10000000$. Now $\pi$ looks like the following as represented in the floating point model:
 
@@ -48,7 +48,7 @@ we get the mantissa $m=1,100100011110101110001$ and an exponent with bias of $e=
 
 But wait, I remember values like 0.3 are a problem in binary representation. Is that true? Let's try.
 
-$$\\ 0.3 \cdot 2 = 0.6 \rightarrow -0 \\ 0.6 \cdot 2 = 1.2 \rightarrow -1 \\ 0.2 \cdot 2 = 0.4 \rightarrow -0 \\ 0.4 \cdot 2 = 0.8 \rightarrow -0 \\ 0.8 \cdot 2 = 1.6 \rightarrow -1 \\ 0.6 \cdot 2 = 1.2 \rightarrow -0 \\ \cdot \\ \cdot \\ = 010010.... \\$$
+$$\\\\ 0.3 \cdot 2 = 0.6 \rightarrow -0 \\\\ 0.6 \cdot 2 = 1.2 \rightarrow -1 \\\\ 0.2 \cdot 2 = 0.4 \rightarrow -0 \\\\ 0.4 \cdot 2 = 0.8 \rightarrow -0 \\\\ 0.8 \cdot 2 = 1.6 \rightarrow -1 \\\\ 0.6 \cdot 2 = 1.2 \rightarrow -0 \\\\ \cdot \\\\ \cdot \\\\ = 010010.... \\\\$$
 
 Ok, that seems to be really a problem, fractions like 0.3 can't be represented exactly in a binary system because we would need an infinite number of bits and therefore rounding has to be applied while converting back from binary to a decimal representation. The [machine epsilon][3] is giving the upper bound of the rounding error and can be calculated by
 
