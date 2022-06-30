@@ -40,6 +40,9 @@ $$T\left(n\right)=c_0 n + c_1 \left(n-1\right) + c_2 \left(n-1\right) + c_3 \sum
 The best case that could happen is if the list is already in an ascending order. Then `i >= 0 and A[i] > key` is always false and our sum is reduced to:
 
 $$T\left(n\right)=c_0 n + c_1 \left(n-1\right) + c_2 \left(n-1\right) + c_6 \left(n-1\right)$$
+$$T\left(n\right)=\left(c_0 + c_1 + c_2 + c_6\right)n - \left(c_6 + c_2 + c_1\right)$$
+
+We can say $T\left(n\right)=an+b$. Therefore the runtime is a *linear function*.
 
 In most cases we are interested in the worst case scenarios. For a sorting algorithm thats the case if the list is in an descending order.
 
