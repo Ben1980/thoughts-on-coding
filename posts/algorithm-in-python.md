@@ -44,7 +44,14 @@ $$T\left(n\right)=\left(c_0 + c_1 + c_2 + c_6\right)n - \left(c_6 + c_2 + c_1\ri
 
 We can say $T\left(n\right)=an+b$. Therefore the runtime is a *linear function*.
 
-In most cases we are interested in the worst case scenarios. For a sorting algorithm thats the case if the list is in an descending order.
+In most cases we are interested in the worst case scenarios. For a sorting algorithm thats the case if the list is in an descending order. Lets work through the formula $T\left(n\right)$. First of all the a sum like $\sum_{k=1}^n k$ is a arithmetic series:
+
+$$\sum_{k=1}^n k = \frac{1}{2}n\left(n+1\right)$$
+
+Because For the sum in $T\left(n\right)$ that would be
+
+$$\sum_{k=1}^n t_j = \frac{1}{2}n\left(n+1\right) - 1$$
+$$\sum_{k=1}^n \left(t_j - 1\right) = \frac{1}{2}n\left(n+1\right)$$
 
 
 ### Merge Sort
