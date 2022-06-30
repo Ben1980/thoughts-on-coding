@@ -1,7 +1,7 @@
 ---
 title: "Introduction into Algorithm in Python"
 description: Ongoing post about basic algorithm, like sorting and many more, in python.
-date: 2019-06-06
+date: 2022-06-30
 tags:
   - python
   - algorithm
@@ -16,12 +16,12 @@ Because I'm currently attending....
 
 ## Sorting
 
-### Insertion Sort
+### Insertion Sort and Introduction Into Computation of Algorithm Efficiency
 
-Insertion sort is a fairly easy and straight forward sorting algorithm. Imagine you have a deck of cards upside down on a table. You pick the first card and take it into your left hand. Then you pick a second card from the deck and compare its value to the first card already in your left hand. If the newly picked card has a lower value you add it before the first card. If the value is higher you add it after the first card. For all following cards the algorithm goes the same way, comparing the value of the newly picked card to all cards already in your left hand and adding it to a position where on the left side all values are equal or less, and on the right side all values are equal or high, than your newly picked card.
+Insertion sort is a fairly easy and straight forward sorting algorithm. Imagine you have a deck of cards upside down on a table. You pick the first card and take it into your left hand. Then you pick a second card from the deck and compare its value to the first card already in your left hand. If the newly picked card has a lower value you add it before the first card. If the value is higher you add it after the first card. For all following cards the algorithm goes the same way, comparing the value of the newly picked card to all cards already in your left hand and adding it to a position where on the left side all values are equal or less, and on the right side all values are equal or high, than your newly picked card. To derive the algorithm performance efficency we assign each instruction with a *cost* and a *amount* how often the instruction is executed.
 
 ```python
-def InsertionSort(A):                   # Cost  Count
+def InsertionSort(A):                   # cost  amount
     for j in range(1, len(A)):          # c0    n
         key = A[j]                      # c1    n - 1
         i = j - 1                       # c2    n - 1
@@ -33,11 +33,15 @@ def InsertionSort(A):                   # Cost  Count
 ```
 *Insertion Sort implementation in Python*
 
-The computational performance of the algorithm is then
+The execution time $T\left(n\right)$ is then the sum of all instruction *cost* times the *amount*:
 
 $$T\left(n\right)=c_0 n + c_1 \left(n-1\right) + c_2 \left(n-1\right) + c_3 \sum_{j=1}^n t_j +  c_4 \sum_{j=1}^n \left(t_j - 1\right) + c_5 \sum_{j=1}^n \left(t_j - 1\right) + c_6 \left(n-1\right)$$
 
+The best case that could happen is if the list is already in an ascending order. Then `i >= 0 and A[i] > key` is always false and our sum is reduced to:
 
+$$T\left(n\right)=c_0 n + c_1 \left(n-1\right) + c_2 \left(n-1\right) + c_6 \left(n-1\right)$$
+
+In most cases we are interested in the worst case scenarios. For a sorting algorithm thats the case if the list is in an descending order.
 
 
 ### Merge Sort
