@@ -12,7 +12,7 @@ image: /img/pexels-daniel-watson-762679.jpg
 
 Because I'm currently attending....
 
-![Hero Image: Gearbox, Foto von Pixabay von Pexels](/img/pexels-pixabay-159298.jpg)
+![Hero Image: Gearbox, Foto von Pixabay von Pexels](/img/michael-dziedzic-aQYgUYwnCsM-unsplash.jpg)
 
 ## Sorting
 
