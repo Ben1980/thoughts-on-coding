@@ -243,7 +243,7 @@ This algorithm needs a range $[a,b]$ which might include (not absolutely necessa
 
 The idea of [Dekker's][5] method is now to combine the speed of the Newton/Secant method with the convergence guarantee of Bisection. The algorithm is defined as the following:
 
-$$s=\left\{ \begin{matrix} b_k-f(b_k)\frac{b_k-b_{k-1}}{f(b_k)-f(b_{k-1})}, & if \: f(b_k) \neq f(b_{k-1}) \\ m & otherwise \end{matrix} \quad \right\}.$$
+$$s=\left\\{\begin{matrix} b_k-f(b_k)\frac{b_k-b_{k-1}}{f(b_k)-f(b_{k-1})}, & if \\: f(b_k) \neq f(b_{k-1}) \\\ m & otherwise \end{matrix} \quad \right.$$
 
 $$m=\frac{a+b}{2}$$
 
@@ -329,7 +329,7 @@ private:
 };
 ```
 
-As we can see in the implementation of Dekker's method we always calculate both values, m and s, with the methods `calculateSecant()` and `calculateBisection()` and assigning the results depending onto what the method `useSecantMethod()` is confirming if s is between m and $b_k$ (as in rule 4 defined). In line 32-33 we confirm if the resulting values of the function $f(x)$ are fulfilling rule number 5. Because of the Bisection, we have to check and correct after each iteration if the condition of $f(a_k)f(b_k) < 0& is still accomplished which is done with the method `checkAndFixAlgorithmCriteria()`.
+As we can see in the implementation of Dekker's method we always calculate both values, m and s, with the methods `calculateSecant()` and `calculateBisection()` and assigning the results depending onto what the method `useSecantMethod()` is confirming if s is between m and $b_k$ (as in rule 4 defined). In line 32-33 we confirm if the resulting values of the function $f(x)$ are fulfilling rule number 5. Because of the Bisection, we have to check and correct after each iteration if the condition of $f(a_k)f(b_k) < 0$ is still accomplished which is done with the method `checkAndFixAlgorithmCriteria()`.
 
 ![Results of Dekker Algorithm](/img/dekker_results-1.png)
 *Results of Dekker Algorithm*
