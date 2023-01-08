@@ -243,7 +243,7 @@ This algorithm needs a range $[a,b]$ which might include (not absolutely necessa
 
 The idea of [Dekker's][5] method is now to combine the speed of the Newton/Secant method with the convergence guarantee of Bisection. The algorithm is defined as the following:
 
-$$s=\left\{ \begin{matrix} b_k-f(b_k)\frac{b_k-b_{k-1}}{f(b_k)-f(b_{k-1})}, & if \: f(b_k) \neq f(b_{k-1}) \\ m & otherwise \end{matrix} \quad \right.$$
+$$s=\left\{ \begin{matrix} b_k-f(b_k)\frac{b_k-b_{k-1}}{f(b_k)-f(b_{k-1})}, & if \: f(b_k) \neq f(b_{k-1}) \\ m & otherwise \end{matrix} \quad \right\}.$$
 
 $$m=\frac{a+b}{2}$$
 
