@@ -1,7 +1,8 @@
 [build]
   publish = "_site"
   # Allows overriding metadata.json via env var
-  command = "[ \"$METADATA_JSON\" ] && echo $METADATA_JSON > _data/metadata.json; npm run build"
+  # command = "[ \"$METADATA_JSON\" ] && echo $METADATA_JSON > _data/metadata.json; npm run build"
+  command = "npm run build"
   functions = "functions/"
   environment = { NODE_VERSION = "16.15.1" }
 
