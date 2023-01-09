@@ -1,28 +1,29 @@
 [build]
   publish = "_site"
   # Allows overriding metadata.json via env var
-  command = "[ \"$METADATA_JSON\" ] && echo $METADATA_JSON > _data/metadata.json; npm run build"
+  # command = "[ \"$METADATA_JSON\" ] && echo $METADATA_JSON > _data/metadata.json; npm run build"
+  command = "npm run build"
   functions = "functions/"
 
-[[plugins]]
-  package = "@netlify/plugin-functions-install-core"
+#[[plugins]]
+#  package = "@netlify/plugin-functions-install-core"
 
-[[plugins]]    
-  package = "netlify-plugin-submit-sitemap"
-    [plugins.inputs]
+#[[plugins]]    
+#  package = "netlify-plugin-submit-sitemap"
+#    [plugins.inputs]
 
-	  # The base url of your site (optional, default = main URL set in Netlify)
-	  baseUrl = "https://thoughts-on-coding.com"
+#	  # The base url of your site (optional, default = main URL set in Netlify)
+#	  baseUrl = "https://thoughts-on-coding.com"
 
-	  # Path to the sitemap URL (optional, default = /sitemap.xml)
-	  sitemapPath = "/sitemap.xml"
+#	  # Path to the sitemap URL (optional, default = /sitemap.xml)
+#	  sitemapPath = "/sitemap.xml"
 
-	  # Enabled providers to submit sitemap to (optional, default = 'google', 'bing', 'yandex'). Possible providers are currently only 'google', 'bing', 'yandex'.
-	  providers = [
-		  "google",
-		  "bing",
-		  "yandex"
-	  ]
+#	  # Enabled providers to submit sitemap to (optional, default = 'google', 'bing', 'yandex'). Possible providers are currently only 'google', 'bing', 'yandex'.
+#	  providers = [
+#		  "google",
+#		  "bing",
+#		  "yandex"
+#	  ]
 
 [[headers]]
   for = "*.avif"
